@@ -16,3 +16,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Dev Container persisted data (keep credentials outside git)
+.devcontainer-data/

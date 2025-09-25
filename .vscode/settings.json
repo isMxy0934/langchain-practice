@@ -1,0 +1,7 @@
+{
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.postCommitCommand": "sync",
+  "dev.containers.copyGitConfig": false,
+}

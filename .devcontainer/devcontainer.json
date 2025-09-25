@@ -2,7 +2,8 @@
   "name": "LangChain Practice",
   "image": "mcr.microsoft.com/devcontainers/python:3.12",
   "features": {
-    "ghcr.io/devcontainers/features/git:1": {}
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
   },
   "customizations": {
     "vscode": {
@@ -10,10 +11,18 @@
         "ms-python.python",
         "ms-python.debugpy",
         "ms-python.black-formatter",
-        "ms-python.pylint"
+        "ms-python.pylint",
+        "github.vscode-pull-request-github"
       ]
     }
   },
-  "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh && uv sync",
+  "containerEnv": {
+    "GIT_CONFIG_GLOBAL": "/tmp/null",
+    "GIT_CONFIG_SYSTEM": "/tmp/null"
+  },
+  "postCreateCommand": [
+    "curl -LsSf https://astral.sh/uv/install.sh | sh",
+    "uv sync"
+  ],
   "remoteUser": "vscode"
 }

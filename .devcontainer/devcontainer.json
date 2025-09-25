@@ -11,7 +11,6 @@
         "ms-python.python",
         "ms-python.debugpy",
         "ms-python.black-formatter",
-        "ms-python.pylint",
         "github.vscode-pull-request-github"
       ]
     }
@@ -20,9 +19,6 @@
     "GIT_CONFIG_GLOBAL": "/tmp/null",
     "GIT_CONFIG_SYSTEM": "/tmp/null"
   },
-  "postCreateCommand": [
-    "curl -LsSf https://astral.sh/uv/install.sh | sh",
-    "uv sync"
-  ],
+  "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh && uv sync",
   "remoteUser": "vscode"
 }
